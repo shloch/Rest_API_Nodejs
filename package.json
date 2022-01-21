@@ -4,6 +4,7 @@
   "description": "Create News Rest API, MongoDB + NodeJs + express",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,7 @@
   "dependencies": {
     "express": "^4.17.2",
     "mongoose": "^6.1.7",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
   }
 }

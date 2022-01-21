@@ -18,3 +18,10 @@ mongoose.connect(DB_URI, {useNewUrlParser: true, useUnifiedTopology: true})
     .catch(error => console.log(error))
 
 app.use(morgan('dev'))
+
+app.use(express.urlencoded({ extended: true})) //to receive POST DATA
+
+//404
+app.use((request, response) => {
+    response.status(404).render('404', {title: '404'})
+})
