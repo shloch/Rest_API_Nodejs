@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (app) => {
-  const articleList = require('../controllers/articleController');
+    const articleList = require('../controllers/articleController');
   app.route('/articles')
     .get(articleList.list_all_articles)
     .post(articleList.create_article);

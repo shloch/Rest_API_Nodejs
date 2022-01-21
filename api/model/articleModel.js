@@ -1,7 +1,7 @@
 'use strict';
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-const ArticleSchema = new Schema({
+
+const ArticleSchema = new mongoose.Schema({
   title: {
     type: String,
     required: 'Enter title'
@@ -20,4 +20,7 @@ const ArticleSchema = new Schema({
     },
   
 });
-module.exports = mongoose.model('Articles', ArticleSchema);
+
+const Article = mongoose.model('Article', ArticleSchema)
+
+module.exports = Article
