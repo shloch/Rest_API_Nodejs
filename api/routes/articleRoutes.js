@@ -6,6 +6,6 @@ module.exports = (app) => {
     .post(articleList.create_article);
   app.route('/articles/:artcleId')
     .get(articleList.read_article)
-    .put(articleList.update_an_article)
+    .put(articleList.update_article)
     .delete(articleList.delete_article);
 };

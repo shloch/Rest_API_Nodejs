@@ -20,8 +20,12 @@ mongoose.connect(DB_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 app.use(morgan('dev'))
 
 app.use(express.urlencoded({ extended: true})) //to receive POST DATA
+app.use(express.json());
+
+const routes = require('./api/routes/articleRoutes'); //importing route
+
 
 //404
-app.use((request, response) => {
-    response.status(404).render('404', {title: '404'})
+app.get('*', (req, res)=>{
+    res.status(404).send({url: req.originalUrl + ' not found'})
 })

@@ -1,41 +1,41 @@
 'use strict';
 const mongoose = require('mongoose'),
-  Book = mongoose.model('Books');
+  Article = mongoose.model('Articles');
 exports.list_all_articles = (req, res) => {
-  Book.find({}, (err, book) => {
+  Article.find({}, (err, articles) => {
     if (err)
       res.send(err);
-    res.json(book);
+    res.json(articles);
   });
 };
 exports.create_article = (req, res) => {
-  let new_book = new Book(req.body);
-  new_book.save((err, book) => {
+  let new_Article = new Article(req.body);
+  new_Article.save((err, article) => {
     if (err)
       res.send(err);
-    res.json(book);
+    res.json(article);
   });
 };
-exports.read_a_book = (req, res) => {
-  Book.findById(req.params.bookId, (err, book) => {
+exports.read_article = (req, res) => {
+  Article.findById(req.params.articleId, (err, article) => {
     if (err)
       res.send(err);
-    res.json(book);
+    res.json(article);
   });
 };
-exports.update_a_book = (req, res) => {
- Book.findOneAndUpdate({_id: req.params.bookId}, req.body, {new: true}, (err, task) => {
+exports.update_article = (req, res) => {
+ Article.findOneAndUpdate({_id: req.params.articleId}, req.body, {new: true}, (err, task) => {
     if (err)
       res.send(err);
-    res.json(book);
+    res.json(article);
   });
 };
-exports.delete_a_book = (req, res) => {
-  Book.remove({
-    _id: req.params.bookId
-  }, (err, book) => {
+exports.delete_article = (req, res) => {
+  Article.remove({
+    _id: req.params.articleId
+  }, (err, Article) => {
     if (err)
       res.send(err);
-    res.json({ message: 'Book successfully deleted' });
+    res.json({ message: 'Article successfully deleted' });
   });
 };
