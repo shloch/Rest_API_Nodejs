@@ -25,7 +25,7 @@ exports.read_article = (req, res) => {
   });
 };
 exports.update_article = (req, res) => {
- Article.findOneAndUpdate({_id: req.params.articleId}, req.body, {new: true}, (err, task) => {
+ Article.findOneAndUpdate({_id: req.params.articleId}, req.body, {new: true}, (err, article) => {
     if (err)
       res.send(err);
     res.json(article);

@@ -4,7 +4,7 @@ module.exports = (app) => {
   app.route('/articles')
     .get(articleList.list_all_articles)
     .post(articleList.create_article);
-  app.route('/articles/:artcleId')
+  app.route('/articles/:articleId')
     .get(articleList.read_article)
     .put(articleList.update_article)
     .delete(articleList.delete_article);

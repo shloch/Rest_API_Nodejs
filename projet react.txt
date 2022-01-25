@@ -1,0 +1,8 @@
+Créer une page web permettant l'edition et la création d'un article
+    Technos : React, Express et Mongoose
+
+Créer un chat avec la possiblié de voir qui est sur le chat !
+    Technos : React, Express, Mongoose et Socket.IO
+
+
+https://gitlab.com/hichxm/react-app-to-exploit-express-article-api
