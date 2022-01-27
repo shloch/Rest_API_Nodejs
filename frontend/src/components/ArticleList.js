@@ -1,12 +1,12 @@
 
    
 import React from 'react'
-import BookDetails from './BookDetails';
+import BookDetails from './ArticleDetails';
 import { useState, useEffect } from 'react';
 import baseURL from '../configBaseURL'
 
 
-function BookList() {
+function ArticleList() {
     const [selectedID, setSelectedID] = useState(null);
     const [itemsArr, setItemsArr] = useState([])
     const [deleteStatus, setDeleteStatus] = useState(null)
@@ -64,4 +64,4 @@ function BookList() {
 
 }
 
-export default BookList;
+export default ArticleList;

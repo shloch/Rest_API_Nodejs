@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import baseURL from '../configBaseURL'
 
-function AddBook(props) {
+function AddArticle(props) {
 
     const [name, setName] = useState('');
     const [content, setContent] = useState('');
@@ -51,4 +51,4 @@ function AddBook(props) {
     )
 }
 
-export default AddBook
+export default AddArticle

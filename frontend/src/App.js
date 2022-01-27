@@ -1,5 +1,5 @@
-import BookList from './components/BookList'
-import AddBook from './components/AddBook'
+import ArticleList from './components/ArticleList'
+import AddArticle from './components/AddArticle'
 import './App.css';
 
 function App() {
@@ -7,8 +7,8 @@ function App() {
     <div id="main">
       <h1> Liste des articles </h1>
       <h4> Clicker un article pour voir les details</h4>
-      <BookList />
-      <AddBook />
+      <ArticleList />
+      <AddArticle />
     </div>
   );
 }
