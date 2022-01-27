@@ -4,8 +4,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1> List of books </h1>
+    <div id="main">
+      <h1> Liste des articles </h1>
+      <h4> Clicker un article pour voir les details</h4>
       <BookList />
       <AddBook />
     </div>

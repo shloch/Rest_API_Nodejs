@@ -2,9 +2,11 @@
 const express = require('express')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
+const cors = require('cors');
 const PORT = 3001
 
 const app = express()
+app.use(cors())
 
 Article = require('./api/model/articleModel') //created model loading here
 
